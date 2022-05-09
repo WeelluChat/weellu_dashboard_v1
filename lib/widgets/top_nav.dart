@@ -1,5 +1,5 @@
-import 'package:dashboard_template/constants/style.dart';
-import 'package:dashboard_template/helpers/responsiveness.dart';
+import 'package:dashboard_v1/constants/style.dart';
+import 'package:dashboard_v1/helpers/responsiveness.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_text.dart';

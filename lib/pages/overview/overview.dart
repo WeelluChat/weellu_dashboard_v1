@@ -1,10 +1,10 @@
-import 'package:dashboard_template/constants/controllers.dart';
-import 'package:dashboard_template/helpers/responsiveness.dart';
-import 'package:dashboard_template/pages/overview/widgets/overview_cards_large.dart';
-import 'package:dashboard_template/pages/overview/widgets/overview_cards_medium.dart';
-import 'package:dashboard_template/pages/overview/widgets/overview_cards_small.dart';
-import 'package:dashboard_template/pages/overview/widgets/revenue_section_large.dart';
-import 'package:dashboard_template/widgets/custom_text.dart';
+import 'package:dashboard_v1/constants/controllers.dart';
+import 'package:dashboard_v1/helpers/responsiveness.dart';
+import 'package:dashboard_v1/pages/overview/widgets/overview_cards_large.dart';
+import 'package:dashboard_v1/pages/overview/widgets/overview_cards_medium.dart';
+import 'package:dashboard_v1/pages/overview/widgets/overview_cards_small.dart';
+import 'package:dashboard_v1/pages/overview/widgets/revenue_section_large.dart';
+import 'package:dashboard_v1/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 

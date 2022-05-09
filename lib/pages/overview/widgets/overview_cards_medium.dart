@@ -1,4 +1,4 @@
-import 'package:dashboard_template/pages/overview/widgets/info_card.dart';
+import 'package:dashboard_v1/pages/overview/widgets/info_card.dart';
 import 'package:flutter/material.dart';
 
 class OverviewcardsMediumScreen extends StatelessWidget {

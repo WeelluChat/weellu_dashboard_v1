@@ -1,5 +1,5 @@
-import 'package:dashboard_template/constants/style.dart';
-import 'package:dashboard_template/widgets/custom_text.dart';
+import 'package:dashboard_v1/constants/style.dart';
+import 'package:dashboard_v1/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class InfoCardSmall extends StatelessWidget {

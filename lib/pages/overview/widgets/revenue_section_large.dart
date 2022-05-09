@@ -1,7 +1,7 @@
-import 'package:dashboard_template/constants/style.dart';
-import 'package:dashboard_template/pages/overview/widgets/bar_chart.dart';
-import 'package:dashboard_template/pages/overview/widgets/revenue_info.dart';
-import 'package:dashboard_template/widgets/custom_text.dart';
+import 'package:dashboard_v1/constants/style.dart';
+import 'package:dashboard_v1/pages/overview/widgets/bar_chart.dart';
+import 'package:dashboard_v1/pages/overview/widgets/revenue_info.dart';
+import 'package:dashboard_v1/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class RevenueSectionLarge extends StatelessWidget {

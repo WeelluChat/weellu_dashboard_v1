@@ -4,7 +4,9 @@ import 'package:dashboard_v1/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class DriversPage extends StatelessWidget {
+class AppUpdatePage extends StatelessWidget {
+  const AppUpdatePage({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(

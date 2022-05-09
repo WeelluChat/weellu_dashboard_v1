@@ -1,4 +1,4 @@
-import 'package:dashboard_template/helpers/local_navigator.dart';
+import 'package:dashboard_v1/helpers/local_navigator.dart';
 import 'package:flutter/material.dart';
 
 class SmallScreen extends StatelessWidget {

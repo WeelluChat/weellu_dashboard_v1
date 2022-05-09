@@ -1,5 +1,5 @@
 import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:dashboard_template/constants/style.dart';
+import 'package:dashboard_v1/constants/style.dart';
 import 'package:flutter/material.dart';
 
 class SimpleBarChart extends StatelessWidget {
