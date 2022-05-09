@@ -1,4 +1,3 @@
-import 'package:charts_flutter/flutter.dart';
 import 'package:dashboard_v1/constants/style.dart';
 import 'package:dashboard_v1/helpers/responsiveness.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
           ? Row(
               children: [
                 Container(
-                    padding: EdgeInsets.only(left: 14),
+                    padding: const EdgeInsets.only(left: 14),
                     child: Image.asset('assets/icons/5.png', width: 28)),
               ],
             )
@@ -19,7 +18,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
               onPressed: () {
                 key.currentState.openDrawer();
               },
-              icon: Icon(Icons.menu),
+              icon: const Icon(Icons.menu),
             ),
       elevation: 0,
       title: Row(
@@ -45,7 +44,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                   child: Container(
                     width: 12,
                     height: 12,
-                    padding: EdgeInsets.all(4),
+                    padding: const EdgeInsets.all(4),
                     decoration: BoxDecoration(
                         color: active,
                         borderRadius: BorderRadius.circular(20),
@@ -58,22 +57,22 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
             height: 22,
             color: lightGrey,
           ),
-          SizedBox(
+          const SizedBox(
             width: 24,
           ),
           CustomText(
             text: 'Henrique Almeida',
             color: lightGrey,
           ),
-          SizedBox(
+          const SizedBox(
             width: 16,
           ),
           Container(
             decoration: BoxDecoration(
                 color: Colors.white, borderRadius: BorderRadius.circular(30)),
             child: Container(
-              padding: EdgeInsets.all(2),
-              margin: EdgeInsets.all(2),
+              padding: const EdgeInsets.all(2),
+              margin: const EdgeInsets.all(2),
               child: CircleAvatar(
                   backgroundColor: light,
                   child: Icon(
