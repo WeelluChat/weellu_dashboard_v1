@@ -1,6 +1,6 @@
-import 'package:dashboard_v1/constants/controllers.dart';
-import 'package:dashboard_v1/constants/style.dart';
-import 'package:dashboard_v1/widgets/custom_text.dart';
+import 'package:dashboard_template/constants/controllers.dart';
+import 'package:dashboard_template/constants/style.dart';
+import 'package:dashboard_template/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
@@ -42,7 +42,7 @@ class HorizontalMenuItem extends StatelessWidget {
                 width: _width / 80,
               ),
               Padding(
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 child: menuController.returnIconFor(itemName),
               ),
               if (!menuController.isActive(itemName))

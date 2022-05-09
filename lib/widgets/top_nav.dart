@@ -1,5 +1,5 @@
-import 'package:dashboard_v1/constants/style.dart';
-import 'package:dashboard_v1/helpers/responsiveness.dart';
+import 'package:dashboard_template/constants/style.dart';
+import 'package:dashboard_template/helpers/responsiveness.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_text.dart';
@@ -10,8 +10,10 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
           ? Row(
               children: [
                 Container(
-                    padding: const EdgeInsets.only(left: 14),
-                    child: Image.asset('assets/icons/5.png', width: 28)),
+                  padding: const EdgeInsets.only(left: 14),
+                  // child: Image.asset('assets/icons/5.png', width: 28),
+                  child: const CircleAvatar(),
+                ),
               ],
             )
           : IconButton(
@@ -25,7 +27,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
         children: [
           Visibility(
               child: CustomText(
-                  text: "Weellu",
+                  text: "Dashboard",
                   color: lightGrey,
                   size: 20,
                   weight: FontWeight.bold)),

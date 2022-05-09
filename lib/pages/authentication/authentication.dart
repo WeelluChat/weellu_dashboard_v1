@@ -1,12 +1,10 @@
-import 'package:dashboard_v1/constants/controllers.dart';
-import 'package:dashboard_v1/helpers/responsiveness.dart';
-import 'package:dashboard_v1/widgets/custom_text.dart';
+import 'package:dashboard_template/constants/controllers.dart';
+import 'package:dashboard_template/helpers/responsiveness.dart';
+import 'package:dashboard_template/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AuthenticationPage extends StatelessWidget {
-  const AuthenticationPage({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Column(

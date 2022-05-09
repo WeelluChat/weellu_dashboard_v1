@@ -1,6 +1,6 @@
-import 'package:dashboard_v1/constants/controllers.dart';
-import 'package:dashboard_v1/constants/style.dart';
-import 'package:dashboard_v1/widgets/custom_text.dart';
+import 'package:dashboard_template/constants/controllers.dart';
+import 'package:dashboard_template/constants/style.dart';
+import 'package:dashboard_template/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -42,7 +42,7 @@ class VerticalMenuItem extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
-                  padding: EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(16),
                   child: menuController.returnIconFor(itemName),
                 ),
                 if (!menuController.isActive(itemName))

@@ -1,15 +1,13 @@
-import 'package:dashboard_v1/constants/controllers.dart';
-import 'package:dashboard_v1/constants/style.dart';
-import 'package:dashboard_v1/helpers/responsiveness.dart';
-import 'package:dashboard_v1/routing/routes.dart';
-import 'package:dashboard_v1/widgets/custom_text.dart';
-import 'package:dashboard_v1/widgets/side_menu_item.dart';
+import 'package:dashboard_template/constants/controllers.dart';
+import 'package:dashboard_template/constants/style.dart';
+import 'package:dashboard_template/helpers/responsiveness.dart';
+import 'package:dashboard_template/routing/routes.dart';
+import 'package:dashboard_template/widgets/custom_text.dart';
+import 'package:dashboard_template/widgets/side_menu_item.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SideMenu extends StatelessWidget {
-  const SideMenu({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     double _width = MediaQuery.of(context).size.width;
@@ -22,19 +20,18 @@ class SideMenu extends StatelessWidget {
             Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 Row(
                   children: [
                     SizedBox(width: _width / 48),
-                    Padding(
-                        padding: EdgeInsets.only(right: 12),
-                        child: Image.asset(
-                          'assets/icons/6.png',
-                          width: 50,
-                        )),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 12),
+                      // child: Image.asset('assets/icons/6.png', width: 50),
+                      child: CircleAvatar(),
+                    ),
                     Flexible(
                         child: CustomText(
-                            text: 'Weellu',
+                            text: 'Dashboard',
                             size: 20,
                             weight: FontWeight.bold,
                             color: active)),
@@ -55,8 +52,9 @@ class SideMenu extends StatelessWidget {
                         if (itemName == AuthenticationPageRoute) {}
                         if (!menuController.isActive(itemName)) {
                           menuController.changeActiveitemTo(itemName);
-                          if (ResponsiveWidget.isSmallScreen(context))
+                          if (ResponsiveWidget.isSmallScreen(context)) {
                             Get.back();
+                          }
                           navigationController.navigateTo(itemName);
                         }
                       },
