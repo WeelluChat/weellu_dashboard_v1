@@ -1,6 +1,7 @@
 import 'package:dashboard_v1/constants/controllers.dart';
 import 'package:dashboard_v1/constants/style.dart';
 import 'package:dashboard_v1/helpers/responsiveness.dart';
+import 'package:dashboard_v1/pages/authentication/authentication.dart';
 import 'package:dashboard_v1/routing/routes.dart';
 import 'package:dashboard_v1/widgets/custom_text.dart';
 import 'package:dashboard_v1/widgets/side_menu_item.dart';
@@ -49,7 +50,9 @@ class SideMenu extends StatelessWidget {
                           ? 'Logout'
                           : itemName,
                       onTap: () {
-                        if (itemName == AuthenticationPageRoute) {}
+                        if (itemName == AuthenticationPageRoute) {
+                          Get.offAll(() => AuthenticationPage());
+                        }
                         if (!menuController.isActive(itemName)) {
                           menuController.changeActiveitemTo(itemName);
                           if (ResponsiveWidget.isSmallScreen(context)) {
