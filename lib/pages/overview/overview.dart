@@ -45,7 +45,6 @@ class OverViewPage extends StatelessWidget {
               RevenueSectionLarge()
             else
               RevenueSectionSmall(),
-            AvailableDrivers()
           ],
         ))
       ],

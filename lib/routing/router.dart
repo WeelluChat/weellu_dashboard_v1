@@ -2,8 +2,6 @@ import 'package:dashboard_v1/pages/appupdate/appupdate.dart';
 import 'package:dashboard_v1/pages/authentication/authentication.dart';
 import 'package:dashboard_v1/pages/broadcasts/broadcasts.dart';
 import 'package:dashboard_v1/pages/calls/calls.dart';
-import 'package:dashboard_v1/pages/clients/clients.dart';
-import 'package:dashboard_v1/pages/drivers/drivers.dart';
 import 'package:dashboard_v1/pages/groups/groups.dart';
 import 'package:dashboard_v1/pages/help/help.dart';
 import 'package:dashboard_v1/pages/landingpage/landingpage.dart';
@@ -48,10 +46,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(const SEOPage());
     case HelpPageRoute:
       return _getPageRoute(const HelpPage());
-    case DriversPageRoute:
-      return _getPageRoute(DriversPage());
-    case ClientsPageRoute:
-      return _getPageRoute(ClientsPage());
     default:
       return _getPageRoute(AuthenticationPage());
   }

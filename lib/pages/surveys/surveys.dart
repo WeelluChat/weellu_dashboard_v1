@@ -1,5 +1,6 @@
 import 'package:dashboard_v1/constants/controllers.dart';
 import 'package:dashboard_v1/helpers/responsiveness.dart';
+import 'package:dashboard_v1/pages/surveys/widgets/surveys_table.dart';
 import 'package:dashboard_v1/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,7 +26,13 @@ class SurveysPage extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
+        Expanded(
+            child: ListView(
+          children: [
+            SurveysTable(),
+          ],
+        ))
       ],
     );
   }

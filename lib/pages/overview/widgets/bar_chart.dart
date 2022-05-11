@@ -21,28 +21,48 @@ class SimpleBarChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return charts.BarChart(
       seriesList,
+      vertical: true,
       animate: animate,
+      primaryMeasureAxis: const charts.NumericAxisSpec(
+        renderSpec: charts.GridlineRendererSpec(
+          labelStyle: charts.TextStyleSpec(color: charts.Color.white),
+        ),
+      ),
+      domainAxis: const charts.OrdinalAxisSpec(
+        renderSpec: charts.SmallTickRendererSpec(
+          labelStyle: charts.TextStyleSpec(color: charts.Color.white),
+        ),
+      ),
+      barRendererDecorator: charts.BarLabelDecorator(
+        insideLabelStyleSpec: charts.TextStyleSpec(
+          color: charts.ColorUtil.fromDartColor(Colors.white),
+        ),
+        outsideLabelStyleSpec: charts.TextStyleSpec(
+            color: charts.ColorUtil.fromDartColor(Colors.white)),
+      ),
     );
   }
 
   /// Create one series with sample hard coded data.
-  static List<charts.Series<OrdinalSales, String>> _createSampleData() {
+  static List<charts.Series<ChatsSeries, String>> _createSampleData() {
     final data = [
-      OrdinalSales('Today', 55),
-      OrdinalSales('Yesterday', 25),
-      OrdinalSales('2 days', 100),
-      OrdinalSales('24 Jun', 75),
-      OrdinalSales('23 Jun', 38),
-      OrdinalSales('22 Jun', 87),
-      OrdinalSales('21 Jun', 60),
+      ChatsSeries("Text", 2583, charts.ColorUtil.fromDartColor(Colors.green)),
+      ChatsSeries("Audio", 1250, charts.ColorUtil.fromDartColor(Colors.green)),
+      ChatsSeries("Images", 1500, charts.ColorUtil.fromDartColor(Colors.green)),
+      ChatsSeries("Video", 880, charts.ColorUtil.fromDartColor(Colors.green)),
+      ChatsSeries("Files", 365, charts.ColorUtil.fromDartColor(Colors.green)),
+      ChatsSeries(
+          "Location", 300, charts.ColorUtil.fromDartColor(Colors.green)),
+      ChatsSeries("Contact", 100, charts.ColorUtil.fromDartColor(Colors.green)),
     ];
 
     return [
-      charts.Series<OrdinalSales, String>(
+      charts.Series<ChatsSeries, String>(
         id: 'Sales',
-        colorFn: (_, __) => charts.ColorUtil.fromDartColor(active),
-        domainFn: (OrdinalSales sales, _) => sales.year,
-        measureFn: (OrdinalSales sales, _) => sales.sales,
+        colorFn: (ChatsSeries data, _) => data.barColor,
+        domainFn: (ChatsSeries data, _) => data.type,
+        measureFn: (ChatsSeries data, _) => data.quantity,
+        labelAccessorFn: (ChatsSeries data, _) => data.quantity.toString(),
         data: data,
       )
     ];
@@ -50,9 +70,10 @@ class SimpleBarChart extends StatelessWidget {
 }
 
 /// Sample ordinal data type.
-class OrdinalSales {
-  final String year;
-  final int sales;
+class ChatsSeries {
+  final String type;
+  final int quantity;
+  final charts.Color barColor;
 
-  OrdinalSales(this.year, this.sales);
+  ChatsSeries(this.type, this.quantity, this.barColor);
 }

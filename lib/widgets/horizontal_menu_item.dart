@@ -32,7 +32,7 @@ class HorizontalMenuItem extends StatelessWidget {
                 child: Container(
                   width: 6,
                   height: 40,
-                  color: dark,
+                  color: light,
                 ),
                 maintainSize: true,
                 maintainState: true,
@@ -49,13 +49,14 @@ class HorizontalMenuItem extends StatelessWidget {
                 Flexible(
                     child: CustomText(
                   text: itemName,
-                  color: menuController.isHovering(itemName) ? dark : lightGrey,
+                  color:
+                      menuController.isHovering(itemName) ? light : lightGrey,
                 ))
               else
                 Flexible(
                     child: CustomText(
                   text: itemName,
-                  color: dark,
+                  color: light,
                   size: 18,
                   weight: FontWeight.bold,
                 ))

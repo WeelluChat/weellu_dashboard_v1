@@ -31,7 +31,7 @@ class VerticalMenuItem extends StatelessWidget {
               child: Container(
                 width: 3,
                 height: 72,
-                color: dark,
+                color: light,
               ),
               maintainSize: true,
               maintainState: true,
@@ -50,13 +50,13 @@ class VerticalMenuItem extends StatelessWidget {
                       child: CustomText(
                           text: itemName,
                           color: menuController.isHovering(itemName)
-                              ? dark
+                              ? light
                               : lightGrey))
                 else
                   Flexible(
                       child: CustomText(
                           text: itemName,
-                          color: dark,
+                          color: light,
                           size: 18,
                           weight: FontWeight.bold))
               ],

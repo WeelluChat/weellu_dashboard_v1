@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 
 class MenuController extends GetxController {
   static MenuController instance = Get.find();
-  var activeItem = OverViewPageRoute.obs;
+  var activeItem = OverViewPageDisplayName.obs;
   var hoverItem = ''.obs;
 
   changeActiveitemTo(String itemName) {
@@ -22,39 +22,35 @@ class MenuController extends GetxController {
 
   Widget returnIconFor(String itemName) {
     switch (itemName) {
-      case OverViewPageRoute:
+      case OverViewPageDisplayName:
         return _customIcon(Icons.trending_up, itemName);
-      case UsersPageRoute:
+      case UsersPageDisplayName:
         return _customIcon(Icons.person, itemName);
-      case GroupsPageRoute:
+      case GroupsPageDisplayName:
         return _customIcon(Icons.people, itemName);
-      case BroadcastsPageRoute:
+      case BroadcastsPageDisplayName:
         return _customIcon(FlutterIcons.megaphone_ent, itemName);
-      case CallsPageRoute:
+      case CallsPageDisplayName:
         return _customIcon(Icons.phone_in_talk_sharp, itemName);
-      case SurveysPageRoute:
+      case SurveysPageDisplayName:
         return _customIcon(Icons.query_stats_outlined, itemName);
-      case StoriesPageRoute:
+      case StoriesPageDisplayName:
         return _customIcon(Icons.motion_photos_on, itemName);
-      case StoresPageRoute:
+      case StoresPageDisplayName:
         return _customIcon(Icons.shopping_cart, itemName);
-      case LandingPagePageRoute:
+      case LandingPagePageDisplayName:
         return _customIcon(Icons.settings_outlined, itemName);
-      case AppUpdatePageRoute:
+      case AppUpdatePageDisplayName:
         return _customIcon(Icons.system_update, itemName);
-      case SiteImagesPageRoute:
+      case SiteImagesPageDisplayName:
         return _customIcon(Icons.image_search, itemName);
-      case NotificationsPageRoute:
+      case NotificationsPageDisplayName:
         return _customIcon(Icons.notifications_active, itemName);
-      case SEOPageRoute:
+      case SEOPageDisplayName:
         return _customIcon(Icons.bar_chart_rounded, itemName);
-      case HelpPageRoute:
+      case HelpPageDisplayName:
         return _customIcon(Icons.help_outline, itemName);
-      case DriversPageRoute:
-        return _customIcon(Icons.drive_eta, itemName);
-      case ClientsPageRoute:
-        return _customIcon(Icons.people, itemName);
-      case AuthenticationPageRoute:
+      case AuthenticationPageDisplayName:
         return _customIcon(Icons.exit_to_app, itemName);
       default:
         return _customIcon(Icons.exit_to_app, itemName);
@@ -62,7 +58,7 @@ class MenuController extends GetxController {
   }
 
   Widget _customIcon(IconData icon, String itemName) {
-    if (isActive(itemName)) return Icon(icon, size: 22, color: dark);
-    return Icon(icon, color: isHovering(itemName) ? dark : lightGrey);
+    if (isActive(itemName)) return Icon(icon, size: 22, color: light);
+    return Icon(icon, color: isHovering(itemName) ? light : lightGrey);
   }
 }

@@ -9,15 +9,15 @@ class AvailableDrivers extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 30),
       decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8),
-          boxShadow: [
-            BoxShadow(
-                offset: const Offset(0, 6),
-                color: lightGrey.withOpacity(.1),
-                blurRadius: 12),
-          ],
-          border: Border.all(color: lightGrey, width: .5)),
+        color: secondaryColor,
+        borderRadius: BorderRadius.circular(8),
+        boxShadow: [
+          BoxShadow(
+              offset: const Offset(0, 6),
+              color: secondaryColor.withOpacity(.1),
+              blurRadius: 12),
+        ],
+      ),
       padding: EdgeInsets.all(16),
       child: Column(
         mainAxisSize: MainAxisSize.min,

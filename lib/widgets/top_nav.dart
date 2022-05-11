@@ -34,12 +34,13 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
           Expanded(child: Container()),
           IconButton(
               onPressed: () {},
-              icon: Icon(Icons.settings, color: dark.withOpacity(.7))),
+              icon: Icon(Icons.settings, color: light.withOpacity(.7))),
           Stack(
             children: [
               IconButton(
                   onPressed: () {},
-                  icon: Icon(Icons.notifications, color: dark.withOpacity(.7))),
+                  icon:
+                      Icon(Icons.notifications, color: light.withOpacity(.7))),
               Positioned(
                   top: 7,
                   right: 7,
@@ -71,7 +72,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
           ),
           Container(
             decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(30)),
+                color: bgColor, borderRadius: BorderRadius.circular(30)),
             child: Container(
               padding: const EdgeInsets.all(2),
               margin: const EdgeInsets.all(2),
@@ -79,12 +80,12 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                   backgroundColor: light,
                   child: Icon(
                     Icons.person_outline,
-                    color: dark,
+                    color: Colors.black,
                   )),
             ),
           )
         ],
       ),
-      iconTheme: IconThemeData(color: dark),
+      iconTheme: IconThemeData(color: light),
       backgroundColor: Colors.transparent,
     );
