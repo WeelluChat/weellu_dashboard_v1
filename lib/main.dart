@@ -35,10 +35,11 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: bgColor,
         textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: lightGrey),
-        pageTransitionsTheme: const PageTransitionsTheme(builders: {
-          TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
-          TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
-        }),
+        // pageTransitionsTheme: const PageTransitionsTheme(builders: {
+        //   TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
+        //   TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+
+        // }),
         primaryColor: Colors.blue,
       ),
     );
