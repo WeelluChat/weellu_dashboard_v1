@@ -5,6 +5,15 @@ import 'package:dashboard_v1/pages/calls/calls.dart';
 import 'package:dashboard_v1/pages/groups/groups.dart';
 import 'package:dashboard_v1/pages/help/help.dart';
 import 'package:dashboard_v1/pages/landingpage/landingpage.dart';
+import 'package:dashboard_v1/pages/landingpage/tabs/blogLinks/blogLinks.dart';
+import 'package:dashboard_v1/pages/landingpage/tabs/faqs/faqs.dart';
+import 'package:dashboard_v1/pages/landingpage/tabs/features/features.dart';
+import 'package:dashboard_v1/pages/landingpage/tabs/images/images.dart';
+import 'package:dashboard_v1/pages/landingpage/tabs/plans/plans.dart';
+import 'package:dashboard_v1/pages/landingpage/tabs/privacity/privacity.dart';
+import 'package:dashboard_v1/pages/landingpage/tabs/processes/processes.dart';
+import 'package:dashboard_v1/pages/landingpage/tabs/siteInfo/site_info.dart';
+import 'package:dashboard_v1/pages/landingpage/tabs/testmonials/testmonials.dart';
 import 'package:dashboard_v1/pages/notifications/notifications.dart';
 import 'package:dashboard_v1/pages/overview/overview.dart';
 import 'package:dashboard_v1/pages/seo/seo.dart';
@@ -46,6 +55,26 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(const SEOPage());
     case HelpPageRoute:
       return _getPageRoute(const HelpPage());
+
+    case SiteInfoPageRoute:
+      return _getPageRoute(SiteInfoTab());
+    case ImagesPageRoute:
+      return _getPageRoute(ImagesTab());
+    case FeaturesPageRoute:
+      return _getPageRoute(FeaturesTab());
+    case PlansPageRoute:
+      return _getPageRoute(PlansTab());
+    case TestmonialsPageRoute:
+      return _getPageRoute(TestmonialsTab());
+    case ProcessesPageRoute:
+      return _getPageRoute(ProcessesTab());
+    case FAQsPageRoute:
+      return _getPageRoute(FAQsTab());
+    case PrivacityPageRoute:
+      return _getPageRoute(PrivacityTab());
+    case BlogLinksPageRoute:
+      return _getPageRoute(BlogLinksTab());
+
     default:
       return _getPageRoute(AuthenticationPage());
   }

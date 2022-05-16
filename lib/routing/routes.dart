@@ -45,6 +45,33 @@ const SEOPageRoute = '/seo';
 const HelpPageDisplayName = 'Help & Terms';
 const HelpPageRoute = '/help';
 
+const SiteInfoDisplayName = 'Site Info';
+const SiteInfoPageRoute = '/siteInfo';
+
+const ImagesDisplayName = 'Images';
+const ImagesPageRoute = '/images';
+
+const FeaturesDisplayName = 'Features';
+const FeaturesPageRoute = '/features';
+
+const PlansDisplayName = 'Plans';
+const PlansPageRoute = '/plans';
+
+const TestmonialsDisplayName = 'Testmonials';
+const TestmonialsPageRoute = '/testmonials';
+
+const ProcessesDisplayName = 'Processes';
+const ProcessesPageRoute = '/processes';
+
+const FAQsDisplayName = 'FAQs';
+const FAQsPageRoute = '/faqs';
+
+const PrivacityDisplayName = 'Privacity';
+const PrivacityPageRoute = '/privacity';
+
+const BlogLinksDisplayName = 'Blog Links';
+const BlogLinksPageRoute = '/blogLinks';
+
 class MenuItem {
   final String name;
   final String route;
@@ -68,4 +95,23 @@ List<MenuItem> sideMenuItems = [
   MenuItem(SEOPageDisplayName, SEOPageRoute),
   MenuItem(HelpPageDisplayName, HelpPageRoute),
   MenuItem(AuthenticationPageDisplayName, AuthenticationPageRoute),
+];
+
+class LandingPageTab {
+  final String name;
+  final String route;
+
+  LandingPageTab(this.name, this.route);
+}
+
+List<LandingPageTab> landingPageTabs = [
+  LandingPageTab(SiteInfoDisplayName, SiteInfoPageRoute),
+  LandingPageTab(ImagesDisplayName, ImagesPageRoute),
+  LandingPageTab(FeaturesDisplayName, FeaturesPageRoute),
+  LandingPageTab(PlansDisplayName, PlansPageRoute),
+  LandingPageTab(TestmonialsDisplayName, TestmonialsPageRoute),
+  LandingPageTab(ProcessesDisplayName, ProcessesPageRoute),
+  LandingPageTab(FAQsDisplayName, FAQsPageRoute),
+  LandingPageTab(PrivacityDisplayName, PrivacityPageRoute),
+  LandingPageTab(BlogLinksDisplayName, BlogLinksPageRoute),
 ];

@@ -1,4 +1,5 @@
 import 'package:dashboard_v1/constants/style.dart';
+import 'package:dashboard_v1/controllers/landingpage_controller.dart';
 import 'package:dashboard_v1/controllers/menu_controller.dart';
 import 'package:dashboard_v1/controllers/navigation_controller.dart';
 import 'package:dashboard_v1/layout.dart';
@@ -11,7 +12,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   Get.put(MenuController());
-  Get.put(NavigationController());
+  Get.put(LandingPageController());
+  Get.put(MainNavigationController());
   runApp(MyApp());
 }
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      initialRoute: AuthenticationPageRoute,
+      initialRoute: RootRoute,
       unknownRoute: GetPage(
           name: '/not-found',
           page: () => PageNotFound(),
@@ -35,11 +37,10 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: bgColor,
         textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: lightGrey),
-        // pageTransitionsTheme: const PageTransitionsTheme(builders: {
-        //   TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
-        //   TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
-
-        // }),
+        pageTransitionsTheme: const PageTransitionsTheme(builders: {
+          TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+        }),
         primaryColor: Colors.blue,
       ),
     );

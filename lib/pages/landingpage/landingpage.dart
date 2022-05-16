@@ -1,5 +1,8 @@
 import 'package:dashboard_v1/constants/controllers.dart';
+import 'package:dashboard_v1/constants/style.dart';
+import 'package:dashboard_v1/helpers/local_navigator.dart';
 import 'package:dashboard_v1/helpers/responsiveness.dart';
+import 'package:dashboard_v1/pages/landingpage/widgets/landingpage_tabbar.dart';
 import 'package:dashboard_v1/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,7 +28,15 @@ class LandingPagePage extends StatelessWidget {
               ),
             ],
           ),
-        )
+        ),
+        LandingPageTabBar(),
+        Expanded(
+            child: Container(
+          decoration: BoxDecoration(
+            color: secondaryColor,
+          ),
+          child: tabNavigator(),
+        ))
       ],
     );
   }

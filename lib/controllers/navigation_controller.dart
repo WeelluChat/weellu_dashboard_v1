@@ -1,8 +1,8 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-class NavigationController extends GetxController {
-  static NavigationController instance = Get.find();
+class MainNavigationController extends GetxController {
+  static MainNavigationController instance = Get.find();
   final GlobalKey<NavigatorState> navigationKey = GlobalKey();
 
   Future<dynamic> navigateTo(String routeName) {
