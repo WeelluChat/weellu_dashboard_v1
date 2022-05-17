@@ -1,6 +1,4 @@
 import 'package:dashboard_v1/routing/routes.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';
 
 class LandingPageController extends GetxController {
