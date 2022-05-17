@@ -2,7 +2,6 @@ import 'package:dashboard_v1/constants/controllers.dart';
 import 'package:dashboard_v1/constants/style.dart';
 import 'package:dashboard_v1/helpers/local_navigator.dart';
 import 'package:dashboard_v1/helpers/responsiveness.dart';
-import 'package:dashboard_v1/pages/landingpage/widgets/landingpage_tables.dart';
 import 'package:dashboard_v1/pages/landingpage/widgets/tab_item.dart';
 import 'package:dashboard_v1/routing/routes.dart';
 import 'package:flutter/material.dart';

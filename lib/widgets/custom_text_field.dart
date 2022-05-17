@@ -1,3 +1,4 @@
+import 'package:dashboard_v1/constants/style.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -18,6 +19,7 @@ class CustomTextField extends StatelessWidget {
           ),
           TextField(
             decoration: InputDecoration(
+              hintStyle: TextStyle(color: lightGrey),
               hintText: hint,
               enabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(color: Colors.grey),
