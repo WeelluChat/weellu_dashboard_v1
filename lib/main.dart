@@ -2,6 +2,7 @@ import 'package:dashboard_v1/constants/style.dart';
 import 'package:dashboard_v1/controllers/landingpage_controller.dart';
 import 'package:dashboard_v1/controllers/menu_controller.dart';
 import 'package:dashboard_v1/controllers/navigation_controller.dart';
+import 'package:dashboard_v1/controllers/user_profile_controller.dart';
 import 'package:dashboard_v1/layout.dart';
 import 'package:dashboard_v1/pages/404/error_page.dart';
 import 'package:dashboard_v1/pages/authentication/authentication.dart';
@@ -14,6 +15,7 @@ void main() {
   Get.put(MenuController());
   Get.put(LandingPageController());
   Get.put(MainNavigationController());
+  Get.put(UserProfileController());
   runApp(MyApp());
 }
 

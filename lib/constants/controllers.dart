@@ -5,7 +5,9 @@ import 'package:dashboard_v1/controllers/user_profile_controller.dart';
 
 MenuController menuController = MenuController.instance;
 LandingPageController landingPageController = LandingPageController.instance;
+UserProfileController userProfileController = UserProfileController.instance;
+
 MainNavigationController mainNavigationController = MainNavigationController();
 MainNavigationController landingTabNavigationController =
     MainNavigationController();
-UserProfileController userProfileController = UserProfileController();
+MainNavigationController userProfileTabController = MainNavigationController();

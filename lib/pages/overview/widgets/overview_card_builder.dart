@@ -1,6 +1,6 @@
 import 'package:dashboard_v1/constants/style.dart';
 import 'package:dashboard_v1/models/overview_info_card_model.dart';
-import 'package:dashboard_v1/pages/overview/widgets/info_card%20copy.dart';
+import 'package:dashboard_v1/pages/overview/widgets/profile_info_card.dart';
 import 'package:flutter/material.dart';
 
 import 'info_card.dart';

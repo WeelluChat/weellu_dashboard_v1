@@ -10,83 +10,85 @@ class UserPieChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 5),
-      height: MediaQuery.of(context).size.height / 2.6,
-      width: MediaQuery.of(context).size.width / 2.44,
-      child: Card(
-        color: secondaryColor,
-        child: Column(
-          children: [
-            const Text(
-              'Calls',
-              style: TextStyle(fontSize: 25),
-            ),
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(
-                      top: 10, bottom: 10, right: 50, left: 50),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      SizedBox(
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 15,
-                              width: 40,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                color: Colors.green,
+    return Expanded(
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        height: MediaQuery.of(context).size.height / 2.6,
+        width: MediaQuery.of(context).size.width / 2.44,
+        child: Card(
+          color: secondaryColor,
+          child: Column(
+            children: [
+              const Text(
+                'Calls',
+                style: TextStyle(fontSize: 25),
+              ),
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        top: 10, bottom: 10, right: 50, left: 50),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        SizedBox(
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 15,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: Colors.green,
+                                ),
                               ),
-                            ),
-                            const Text('   Ended'),
-                          ],
+                              const Text('   Ended'),
+                            ],
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        child: Row(
-                          children: [
-                            Container(
-                              height: 15,
-                              width: 40,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                color: Colors.blue,
+                        SizedBox(
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 15,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: Colors.blue,
+                                ),
                               ),
-                            ),
-                            const Text('   Lost'),
-                          ],
+                              const Text('   Lost'),
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  height: MediaQuery.of(context).size.height / 3.5,
-                  width: MediaQuery.of(context).size.width / 2.44,
-                  child: AspectRatio(
-                    aspectRatio: 1,
-                    child: PieChart(
-                      PieChartData(
-                        borderData: FlBorderData(
-                          show: false,
-                        ),
-                        sectionsSpace: 0,
-                        centerSpaceRadius: 0,
-                        sections: getSections4(),
-                      ),
+                      ],
                     ),
                   ),
-                  // child: PieChartSample3(),
-                  // child: PieChart(
-                  //   PieChartData(sections: getSections2()),
-                  // ),
-                ),
-              ],
-            ),
-          ],
+                  Container(
+                    height: MediaQuery.of(context).size.height / 3.5,
+                    width: MediaQuery.of(context).size.width / 2.44,
+                    child: AspectRatio(
+                      aspectRatio: 1,
+                      child: PieChart(
+                        PieChartData(
+                          borderData: FlBorderData(
+                            show: false,
+                          ),
+                          sectionsSpace: 0,
+                          centerSpaceRadius: 0,
+                          sections: getSections4(),
+                        ),
+                      ),
+                    ),
+                    // child: PieChartSample3(),
+                    // child: PieChart(
+                    //   PieChartData(sections: getSections2()),
+                    // ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

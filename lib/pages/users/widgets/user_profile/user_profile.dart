@@ -1,10 +1,18 @@
+import 'package:dashboard_v1/constants/controllers.dart';
 import 'package:dashboard_v1/constants/style.dart';
+import 'package:dashboard_v1/helpers/local_navigator.dart';
+import 'package:dashboard_v1/helpers/responsiveness.dart';
 import 'package:dashboard_v1/models/bar_chart_data.dart';
+import 'package:dashboard_v1/pages/landingpage/widgets/tab_item.dart';
 import 'package:dashboard_v1/pages/overview/widgets/chat_analysis_chart.dart';
 import 'package:dashboard_v1/pages/overview/widgets/user_profile_card_builder.dart';
 import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_activity_piechart.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_groups_table.dart';
 import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_piechart.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_profile_tab_item.dart';
+import 'package:dashboard_v1/routing/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class UserProfile extends StatelessWidget {
   const UserProfile({Key key}) : super(key: key);
@@ -17,6 +25,7 @@ class UserProfile extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   width: 550,
@@ -326,15 +335,45 @@ class UserProfile extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
           Row(
             mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
               UserActivityPieChart(),
               UserPieChart(),
             ],
           ),
           ChatsAnalysisChart(data: BarChartCData.data),
+          // UserGroupsTable(pageController: _pageController),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: userProfileTabs
+                  .map((item) => Expanded(
+                        child: UserProfileTabItem(
+                          itemName: item.name,
+                          onTap: () {
+                            if (!userProfileController.isActive(item.name)) {
+                              userProfileController
+                                  .changeActiveitemTo(item.name);
+                              if (ResponsiveWidget.isSmallScreen(context)) {
+                                Get.back();
+                              }
+                              userProfileTabController.navigateTo(item.route);
+                            }
+                          },
+                        ),
+                      ))
+                  .toList()),
+          // Expanded(
+          //     child: Container(
+          //   decoration: BoxDecoration(
+          //     color: secondaryColor,
+          //   ),
+          //   child: userProfileTabNavigator(),
+          // ))
         ],
       ),
     );

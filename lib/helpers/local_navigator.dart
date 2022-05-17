@@ -15,7 +15,7 @@ Navigator landingPageTabNavigator() => Navigator(
       onGenerateRoute: generateRoute,
     );
 Navigator userProfileTabNavigator() => Navigator(
-      key: landingTabNavigationController.navigationKey,
-      initialRoute: SiteInfoPageRoute,
+      key: userProfileTabController.navigationKey,
+      initialRoute: GroupsTabPageRoute,
       onGenerateRoute: generateRoute,
     );
