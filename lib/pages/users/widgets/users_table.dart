@@ -1,4 +1,6 @@
+import 'package:dashboard_v1/constants/controllers.dart';
 import 'package:dashboard_v1/constants/style.dart';
+import 'package:dashboard_v1/helpers/local_navigator.dart';
 import 'package:dashboard_v1/widgets/custom_text.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
@@ -56,7 +58,10 @@ class UsersTable extends StatelessWidget {
                           borderRadius: BorderRadius.circular(5),
                         ),
                         child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            mainNavigationController
+                                .navigateTo('/user-profile');
+                          },
                           icon: Icon(
                             Icons.remove_red_eye,
                             color: lightGrey,

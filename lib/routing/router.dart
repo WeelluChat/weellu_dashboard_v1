@@ -22,6 +22,7 @@ import 'package:dashboard_v1/pages/stores/stores.dart';
 import 'package:dashboard_v1/pages/stories/stories.dart';
 import 'package:dashboard_v1/pages/surveys/surveys.dart';
 import 'package:dashboard_v1/pages/users/users.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/user_profile.dart';
 import 'package:dashboard_v1/routing/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -74,6 +75,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(PrivacityTab());
     case BlogLinksPageRoute:
       return _getPageRoute(BlogLinksTab());
+
+    case UserProfileScreenPageRoute:
+      return _getPageRoute(UserProfile());
 
     default:
       return _getPageRoute(AuthenticationPage());

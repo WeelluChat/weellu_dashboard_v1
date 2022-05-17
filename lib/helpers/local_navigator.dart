@@ -9,7 +9,12 @@ Navigator localNavigator() => Navigator(
       onGenerateRoute: generateRoute,
     );
 
-Navigator tabNavigator() => Navigator(
+Navigator landingPageTabNavigator() => Navigator(
+      key: landingTabNavigationController.navigationKey,
+      initialRoute: SiteInfoPageRoute,
+      onGenerateRoute: generateRoute,
+    );
+Navigator userProfileTabNavigator() => Navigator(
       key: landingTabNavigationController.navigationKey,
       initialRoute: SiteInfoPageRoute,
       onGenerateRoute: generateRoute,

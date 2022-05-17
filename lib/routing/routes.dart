@@ -28,7 +28,7 @@ const StoresPageDisplayName = 'Stores';
 const StoresPageRoute = '/stores';
 
 const LandingPagePageDisplayName = 'Landing Page';
-const LandingPagePageRoute = '/landing Page';
+const LandingPagePageRoute = '/landingPage';
 
 const AppUpdatePageDisplayName = 'App Update';
 const AppUpdatePageRoute = '/appUpdate';
@@ -72,6 +72,21 @@ const PrivacityPageRoute = '/privacity';
 const BlogLinksDisplayName = 'Blog Links';
 const BlogLinksPageRoute = '/blogLinks';
 
+const GroupsTabDisplayName = 'Groups';
+const GroupsTabPageRoute = '/groupstab';
+
+const BroadcastsTabDisplayName = 'Broadcasts';
+const BroadcastsTabPageRoute = '/broadcaststab';
+
+const ReportedGroupsTabDisplayName = 'Reported Groups';
+const ReportedGroupsTabPageRoute = '/reportedgroups';
+
+const ReportedBroadcastsTabDisplayName = 'Reported Broadcasts';
+const ReportedBroadcastsTabPageRoute = '/reportedbroadcasts';
+
+const UserProfileScreenDisplayName = 'User Profile';
+const UserProfileScreenPageRoute = '/user-profile';
+
 class MenuItem {
   final String name;
   final String route;
@@ -114,4 +129,30 @@ List<LandingPageTab> landingPageTabs = [
   LandingPageTab(FAQsDisplayName, FAQsPageRoute),
   LandingPageTab(PrivacityDisplayName, PrivacityPageRoute),
   LandingPageTab(BlogLinksDisplayName, BlogLinksPageRoute),
+];
+
+class UserProfileTab {
+  final String name;
+  final String route;
+
+  UserProfileTab(this.name, this.route);
+}
+
+List<UserProfileTab> userProfileTabs = [
+  UserProfileTab(GroupsTabDisplayName, GroupsTabPageRoute),
+  UserProfileTab(BroadcastsTabDisplayName, BroadcastsTabPageRoute),
+  UserProfileTab(ReportedGroupsTabDisplayName, ReportedGroupsTabPageRoute),
+  UserProfileTab(
+      ReportedBroadcastsTabDisplayName, ReportedBroadcastsTabPageRoute),
+];
+
+class SubScreen {
+  final String name;
+  final String route;
+
+  SubScreen(this.name, this.route);
+}
+
+List<SubScreen> screens = [
+  SubScreen(UserProfileScreenDisplayName, UserProfileScreenPageRoute)
 ];

@@ -35,7 +35,7 @@ class LandingPagePage extends StatelessWidget {
           decoration: BoxDecoration(
             color: secondaryColor,
           ),
-          child: tabNavigator(),
+          child: landingPageTabNavigator(),
         ))
       ],
     );

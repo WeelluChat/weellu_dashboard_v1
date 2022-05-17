@@ -46,13 +46,14 @@ class LandingPageTabBar extends StatelessWidget {
                             ),
                           ),
                           child: Row(
-                            children: const [
-                              Padding(
+                            children: [
+                              const Padding(
                                   padding: EdgeInsets.symmetric(
                                       horizontal: 10, vertical: 5),
                                   child: Text('English')),
                               Icon(
                                 Icons.arrow_drop_down_outlined,
+                                color: lightGrey,
                               )
                             ],
                           ),
