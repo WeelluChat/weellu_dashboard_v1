@@ -23,6 +23,10 @@ import 'package:dashboard_v1/pages/stories/stories.dart';
 import 'package:dashboard_v1/pages/surveys/surveys.dart';
 import 'package:dashboard_v1/pages/users/users.dart';
 import 'package:dashboard_v1/pages/users/widgets/user_profile/user_profile.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/broadcasts_tab.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/groups_tab.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/reported_broadcasts_tab.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/reported_groups_tab.dart';
 import 'package:dashboard_v1/routing/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -78,6 +82,14 @@ Route<dynamic> generateRoute(RouteSettings settings) {
 
     case UserProfileScreenPageRoute:
       return _getPageRoute(UserProfile());
+    case GroupsTabPageRoute:
+      return _getPageRoute(GroupsTab());
+    case BroadcastsTabPageRoute:
+      return _getPageRoute(BroadcastsTab());
+    case ReportedGroupsTabPageRoute:
+      return _getPageRoute(ReportedGroupsTab());
+    case ReportedBroadcastsTabPageRoute:
+      return _getPageRoute(ReportedBroadcastsTab());
 
     default:
       return _getPageRoute(AuthenticationPage());

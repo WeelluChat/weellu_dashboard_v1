@@ -6,6 +6,7 @@ import 'package:dashboard_v1/controllers/user_profile_controller.dart';
 import 'package:dashboard_v1/layout.dart';
 import 'package:dashboard_v1/pages/404/error_page.dart';
 import 'package:dashboard_v1/pages/authentication/authentication.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/user_profile.dart';
 import 'package:dashboard_v1/routing/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

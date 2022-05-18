@@ -3,12 +3,12 @@ import 'package:dashboard_v1/constants/style.dart';
 import 'package:dashboard_v1/helpers/local_navigator.dart';
 import 'package:dashboard_v1/helpers/responsiveness.dart';
 import 'package:dashboard_v1/models/bar_chart_data.dart';
-import 'package:dashboard_v1/pages/landingpage/widgets/tab_item.dart';
 import 'package:dashboard_v1/pages/overview/widgets/chat_analysis_chart.dart';
 import 'package:dashboard_v1/pages/overview/widgets/user_profile_card_builder.dart';
 import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_activity_piechart.dart';
-import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_groups_table.dart';
 import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_piechart.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_profile_details.dart';
+import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_profile_tab_bar.dart';
 import 'package:dashboard_v1/pages/users/widgets/user_profile/widgets/user_profile_tab_item.dart';
 import 'package:dashboard_v1/routing/routes.dart';
 import 'package:flutter/material.dart';
@@ -19,363 +19,41 @@ class UserProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15, top: 15),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  width: 550,
-                  decoration: BoxDecoration(
-                    color: secondaryColor,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(25.0),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            IconButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                icon: const Icon(
-                                  Icons.arrow_back,
-                                  color: Colors.white,
-                                )),
-                            Row(
-                              children: [
-                                Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.green),
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  child: IconButton(
-                                    tooltip: 'Edit Profile',
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.edit,
-                                      color: Colors.green,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      color: Colors.green,
-                                    ),
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  child: IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(
-                                      Icons.lock,
-                                    ),
-                                    color: Colors.green,
-                                    tooltip: 'Block',
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    border: Border.all(color: Colors.red),
-                                    borderRadius: BorderRadius.circular(5),
-                                  ),
-                                  child: IconButton(
-                                    onPressed: () {},
-                                    icon: Icon(Icons.delete_forever),
-                                    color: Colors.red,
-                                    tooltip: 'Delete',
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(25.0),
-                        child: CircleAvatar(
-                          radius: 70,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'Name',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              'Henrique Almeida',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'About',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              'This is a great app',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'User',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              'rikeealmeida',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'Phone Number',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              '*********',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'E-mail',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              'henrique.almeida@example.com',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'Country',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              'Brazil',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'Joined at',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              'Apr 18, 2022',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'Contacts',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              '0',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'Groups',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              '0',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(25.0),
-                        child: Row(
-                          children: [
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * .12,
-                              child: const Text(
-                                'Last Seen',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 20),
-                              ),
-                            ),
-                            const Text(
-                              'Apr 18, 2022 09:29 AM',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w500, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  width: 25,
-                ),
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: secondaryColor,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: UserProfileCardBuilder(),
-                  ),
-                ),
-              ],
-            ),
+    return ListView(
+      children: [
+        UserProfileDetails(),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: const [
+            UserActivityPieChart(),
+            UserPieChart(),
+          ],
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 15),
+          child: ChatsAnalysisChart(data: BarChartCData.data),
+        ),
+        // UserGroupsTable(pageController: _pageController),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: UserProfileTabBar(),
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 15),
+          height: 500,
+          decoration: BoxDecoration(
+            color: secondaryColor,
           ),
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
-              UserActivityPieChart(),
-              UserPieChart(),
-            ],
-          ),
-          ChatsAnalysisChart(data: BarChartCData.data),
-          // UserGroupsTable(pageController: _pageController),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: userProfileTabs
-                  .map((item) => Expanded(
-                        child: UserProfileTabItem(
-                          itemName: item.name,
-                          onTap: () {
-                            if (!userProfileController.isActive(item.name)) {
-                              userProfileController
-                                  .changeActiveitemTo(item.name);
-                              if (ResponsiveWidget.isSmallScreen(context)) {
-                                Get.back();
-                              }
-                              userProfileTabController.navigateTo(item.route);
-                            }
-                          },
-                        ),
-                      ))
-                  .toList()),
-          // Expanded(
-          //     child: Container(
-          //   decoration: BoxDecoration(
-          //     color: secondaryColor,
-          //   ),
-          //   child: userProfileTabNavigator(),
-          // ))
-        ],
-      ),
+          child: userProfileTabNavigator(),
+        ),
+        SizedBox(
+          height: 20,
+        )
+      ],
     );
   }
 }
